@@ -1,0 +1,383 @@
+
+
+/*
+ *   IF U SEE THIS, I WANNA TELL U SOMETHING, 
+ *   PLEASE REPLY MY FEEL,
+ *   I DON'T KNOW WHAT DO U THINK
+ *   PLEASE GIVE ME A SOMETHING
+ *
+ */
+
+*{
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+}
+
+
+
+img{
+    border:1px solid yellow
+}
+
+div.container{
+    width: 33cm;
+    height: 21.5cm;
+}
+
+.header h1{
+    padding-top:10px;
+    padding-bottom:10px;
+    color:black;
+    font-size:11px;
+    text-align:center;
+    font-weight:bolder;
+}
+
+div.main-content{
+    display:flex;
+}
+
+div.section-left{
+    width: 14cm;
+    padding-left: 1cm;
+}
+div.section-right{
+    box-sizing: border-box;
+}
+
+table{
+    border-collapse: collapse;  
+}
+
+table.section-siswa{
+    padding-top: 6px;
+}
+
+table.section-siswa td:nth-child(1){
+    padding-right: 35px;
+}
+
+
+
+td p{
+    font-size:12px;
+    font-weight:bolder;
+    color: #363f48;
+}
+
+
+.ket-pribadi{
+    padding-top: 17px;
+    padding-left: 5px;
+}
+
+.ket-pribadi .table-nested  tr td:nth-child(3){
+    padding-left: 85.2px;
+}
+.ket-pribadi h5{
+    font-size: 13px;
+}
+
+.table-nested tr:first-child td:first-child{
+    padding-left: 13px;
+}
+
+.table-nested tr td:nth-child(3){
+    padding-left: 72px;
+}
+
+.table-nested tr td:nth-child(4){
+    padding-left: 10px;
+}
+
+.table-nested tr:first-child td:nth-child(2){
+    position: relative;
+    right: 16px;
+}
+
+.nested-data td:first-child {
+    padding-left: 39px;
+}
+
+.wali-table tr td:nth-child(3){
+    padding-left: 38.5px !important;
+}
+
+.default-table tr td:first-child{
+    padding-left: 13px;
+}
+
+.default-table tr td:nth-child(2){
+    padding-left: 3px;
+}
+.default-table tr td:nth-child(3){
+    padding-left: 30.5px;
+;}
+.default-table tr td:nth-child(4){
+    padding-left: 10px;
+}
+
+.ket-tempat-tinggal{
+    padding-top: 10px; 
+}
+
+.box{
+
+    width: 20px;
+    height: 15px;
+    box-sizing: border-box;
+    border:1px solid black;
+    float: left;
+    margin-bottom: 1px;
+}
+
+.ket-pendidikan-prev table tr td:nth-child(3){
+    padding-left: 28px;
+}
+
+.tempat-tinggal tr td:nth-child(3){
+    padding-left: 28px;
+}
+
+.ket-kesehatan tr td:nth-child(3){
+    padding-left: 27px;
+}
+
+.ket-pendidikan-prev .nested-data td:nth-child(3){
+    padding-left: 33px !important;
+}
+
+table tr td div.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-pindah .nested-data td:nth-child(2){
+    position: relative;
+    right: 16px;
+}
+
+.ket-orangtua table tr, .ket-orangtua table td{
+    border:1px solid black;
+}
+
+.ket-orangtua table tr:first-child td p{
+    text-align: center;
+}
+
+.ket-orangtua table td{
+    padding: 0px 5px;
+}
+
+.ket-orangtua table tr td:first-child p{
+    text-align: center;
+}
+
+
+.ket-orangtua table tr td:nth-child(3),.ket-orangtua table tr td:nth-child(4){
+    width: 4cm;
+
+}
+
+.ket-orangtua table tr td:nth-child(3),.ket-orangtua table tr td:nth-child(4){
+    text-align: center;
+}
+.ket-orangtua p{
+    font-size: 9px;
+}
+
+.wali-table tr td:first-child{
+    padding: 0;
+}
+
+.nested-last td:nth-child(3){
+    padding: 0 !important;
+    margin-bottom: 20px;
+}
+
+.perkembangan-table tr td:first-child{
+    padding: 0;
+}
+
+.perkembangan-table tr td:nth-child(3){
+    padding-left: 58px
+}
+
+.foto{
+    width: 3cm;
+    height: 4cm;
+    border:1px solid black;
+}
+.foto-atas{
+    position: relative;
+    top: 110px;
+}
+
+.foto-bawah{
+    position: relative;
+    top: 350px;
+}
+
+.section-right{
+    padding-left: 5px;
+}
+
+
+/*
+    SECTION NILAI
+*/
+
+.table-nilai{
+    margin-top: 10px;
+}
+.table-nilai table tr,.table-nilai table th,.table-nilai table td{
+    border:1px solid black;
+}
+
+.table-nilai table tr th,.table-nilai table tr td{
+    font-size: 11px;
+
+}
+
+.table-nilai table tr td:first-child{
+    text-align: center;
+}
+
+.table-nilai table tr th:nth-child(2){
+    width: 150px;
+}
+
+.table-nilai table tr td:nth-child(2){
+    padding: 5px 0px;
+    padding-left: 4px;
+}
+.table-nilai table tr th:nth-child(3){
+    padding: 5px 10px;
+}
+.table-nilai table tr td:nth-child(3){
+    padding: 10px 5px;
+}
+
+.wrap-ket-hadir{
+    display: flex;
+}
+
+.sem1{ 
+    left: 220px;
+}
+
+.sem2{
+    left: 220px;
+}
+.sem3{
+    top: 92px;
+    left: 66px;
+}
+
+
+
+.ket-hadir{
+   position: relative;
+}
+.ket-hadir tr:first-child td:first-child{
+    width: 104px;
+    text-align: center;
+}
+
+.ket-hadir tr:nth-child(2) td{
+    width: 38px;
+}
+
+.ket-hadir tr td{
+    padding: 5px 0px; 
+    padding-left: 5px;
+}
+
+.predikat{
+    width: 114.2px !important;
+}
+
+.table-next{
+    position: relative;
+    top: 56px;
+    left: -33px;
+
+}
+.table-next tr th{
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.section-child{
+    display: flex;
+
+}
+
+.section-child .siswa{
+   padding-right: 5px
+}
+
+
+.sem3 tr td:first-child{
+    text-align: left !important;
+}
+
+.sem3 tr:nth-child(2) td{
+    text-align: right !important;
+}
+.sem3 tr td{
+    border:none !important;
+}
+.sem3 tr {
+    border:none !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
+.sem3 tr:nth-child(3){
+    border-bottom: 1px solid black !important;
+}
+
+.sem4{
+    top: 0px;
+    left: 130px !important;
+    width: 129px;
+}
+
+.ket{
+    position: absolute;
+    top: 30px;
+    display: flex;
+}
+
+.ket table tr td{
+    font-size: 0.7em;
+
+}
+
+.ket table tr td:nth-child(2){
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+.ket1{
+    position: relative;
+    left:350px;
+}
+
+.ket1:nth-child(2){
+    left: 450px;
+}
+
+.ket1:nth-child(3){
+    left: 550px;
+}
+
+.ket-hadir  tr td{
+    text-align: left !important;
+}
+
+.capitalize  td p {
+   text-transform: capitalize;
+}

@@ -1,0 +1,1484 @@
+
+/*
+    |======================================|    
+    |--------------------------------------|
+    |============CSS GRID==================|
+    |============By: TKD===================|
+    |============SMP 15 PALU===============|
+    |--------------------------------------|
+    |======================================|
+
+*/
+.box1
+{
+    width: 8.333333333%;
+}
+.box2
+{
+    width: 16.66666667%;
+}
+.box3
+{
+    width: 25%;
+}
+.box4
+{
+    width: 33.33333333%;
+}
+.box5
+{
+    width: 41.66666667%;
+}
+.box6
+{
+    width: 50%;
+}
+.box7
+{
+    width: 58.33333333%;
+}
+.box8
+{
+    width: 66.66666667%;
+}
+.box9
+{
+    width: 75%;
+}
+.box10
+{
+    width: 83.33333333%;
+}
+.box11
+{
+    width: 91.66666667%;
+}
+.box12
+{
+    width: 100%;
+}
+
+.push
+{
+    margin-left: 5px;
+}
+.push1
+{
+    margin-left: 8.333333333%;
+}
+.push2
+{
+    margin-left: 16.66666667%;
+}
+.push3
+{
+    margin-left: 25%;
+}
+.push4
+{
+    margin-left: 33.33333333%;
+}
+.push5
+{
+    margin-left: 41.66666667%;
+}
+.push6
+{
+    margin-left: 50%;
+}
+.push7
+{
+    margin-left: 58.33333333%;
+}
+.push8
+{
+    margin-left: 66.66666667%;
+}
+.push9
+{
+    margin-left: 75%;
+}
+.push10
+{
+    margin-left: 83.33333333%;
+}
+.push11
+{
+    margin-left: 91.66666667%;
+}
+.push12
+{
+    margin-left: 100%;
+}
+
+*::after,
+*::before
+{
+    box-sizing: border-box;
+}
+.gap
+{
+    padding: 10px;
+}
+
+
+
+/*Global selector*/
+*
+{
+    font-family: 'segoe ui semibold',Arial,Helvetica,sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+input,
+select,
+button
+{
+    outline: none;
+}
+input[type='radio']
+{
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 20px;
+}
+input[type='text']
+{
+    color: #222930 !important;
+}
+
+
+/*Container for all contents*/
+.container
+{
+    display: grid;
+
+    height: 100vh;
+
+    background: #303952;
+
+    grid-template-columns: 80%;
+    justify-content: end;
+}
+
+.headbar
+{
+    background: white;
+}
+
+/*Section Sidebar*/
+.sidebar
+{
+    position: fixed;
+    z-index: 99;
+
+    width: 20%;
+    height: 100%;
+
+    transition: .2s all ease-in;
+
+    background: #303952;
+}
+.header
+{
+    font-weight: bold;
+
+    display: flex;
+
+    height: 60px;
+    padding: 5px;
+
+    text-align: center;
+
+    color: white;
+    background: #6c7ed9;
+
+    justify-content: center;
+    align-items: center;
+}
+.panel
+{
+    height: 100px;
+
+    background: #5866ae;
+}
+.profile
+{
+    display: flex;
+    flex-direction: row;
+
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+    align-items: center;
+}
+.gambar
+{
+    width: 70px;
+    height: 70px;
+    margin-right: 2px;
+
+    border-radius: 20%;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+.nama-profile
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 190px;
+    padding: 0 0 0 5px;
+
+    color: white;
+
+    justify-content: space-around;
+}
+.nama-profile h1
+{
+    font-size: .9em;
+
+    text-transform: capitalize;
+}
+.nama-profile h2
+{
+    font-size: .8em;
+
+    text-transform: capitalize;
+}
+.sub-sidebar a
+{
+    font-size: .7em;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
+}
+.sub-sidebar a:hover,
+.sub-sidebar:focus
+{
+    background: #282e40;
+}
+.sub-sidebar ul li a
+{
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+.dropdown
+{
+    background: #282e40;
+}
+.dropdown li a:hover
+{
+    background: #1b202f;
+}
+/*End Sidebar*/
+
+/*css Beranda*/
+.modal
+{
+    box-sizing: border-box;
+
+    border: solid #ffaa48 2px;
+    background-color: #feca57;
+}
+.box-siswa
+{
+    display: flex;
+
+    padding: 0 10px;
+
+    align-items: center;
+}
+.box-siswa table
+{
+    width: 100%;
+}
+.box-siswa h2
+{
+    font-size: 1.1em;
+}
+.icon-user
+{
+    padding-right: 20px;
+
+    color: white;
+}
+.submain
+{
+    padding: 20px;
+}
+
+.box-message
+{
+    height: 118px;
+    padding: 20px;
+
+    text-transform: capitalize;
+
+    border: 2px solid #21c8ec;
+    background-color: #48dbfb;
+}
+
+.message
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 20px 0;
+
+    color: white;
+}
+.message h1
+{
+    font-size: 1.3em;
+}
+
+.message p
+{
+    font-size: 1.1em;
+
+    margin-top: 10px;
+
+    text-align: left;
+}
+.message h3
+{
+    font-size: 1.3em;
+
+    color: white !important;
+}
+.message h4
+{
+    color: white !important;
+}
+
+.message table tr th
+{
+    text-align: left;
+}
+
+.message table tr th:first-child
+{
+    font-size: .8em;
+
+    width: 150px;
+    padding: 8px;
+    padding-left: 10px;
+
+    background: rgba(0, 0, 0, .65);
+}
+.message .heading-inform-class
+{
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+.main-chart
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 270px;
+    padding: 5px;
+
+    background-color: #ebebeb;
+
+    align-items: center;
+}
+.main-chart .body-chart
+{
+    display: flex;
+
+    width: 100%;
+    height: 222px;
+
+    background-color: white;
+
+    justify-content: center;
+}
+
+.title-chart p
+{
+    font-size: .9em;
+
+    padding: 5px;
+}
+
+
+/*Right Content FORM*/
+
+.button
+{
+    font-family: monospace;
+    font-size: 1.2rem;
+    line-height: 30px;
+
+    width: 80px;
+    height: 30px;
+
+    text-transform: uppercase;
+}
+.button-menu
+{
+    position: absolute;
+    left: 21%;
+
+    width: 30px;
+    height: 30px;
+
+    background: url(../img/x.png);
+    background-size: 30px 30px;
+}
+.button-show
+{
+    position: absolute;
+    left: 3%;
+
+    width: 25px;
+    height: 25px;
+
+    background: url(../img/i-menu.png);
+    background-size: 30px 28px;
+}
+.button-logout
+{
+    font-size: 1.2em;
+    font-weight: bold;
+
+    padding: 0 20px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    background: #fb4848;
+}
+
+.button-logout:hover
+{
+    background: #d83636;
+}
+
+.sub-headbar
+{
+    height: 60px;
+
+    background: #778beb;
+}
+.section-button
+{
+    display: flex;
+
+    width: 98%;
+    height: 60px;
+    margin: 0 auto;
+
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.section-top
+{
+    width: 90%;
+    margin-top: 5px;
+
+    justify-content: flex-start !important;
+}
+
+.section-top button
+{
+    padding: 5px 25px;
+}
+.nav
+{
+    font-weight: bold;
+
+    box-sizing: border-box;
+    padding: 10px;
+
+    color: #222930;
+    background: #ebebeb;
+}
+.bio
+{
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 1%;
+    padding: 10px;
+
+    border: 2px solid #ebebee;
+}
+
+.selector a
+{
+    font-weight: bold;
+
+    display: block;
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    text-decoration: none;
+
+    color: black;
+    color: #222930;
+    background: #ebebeb;
+}
+.selector a:hover
+{
+    color: white;
+    background: #778beb;
+}
+.buttons
+{
+    font-size: 1.3em;
+
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+
+    color: white;
+    border: none;
+    background-color: gray;
+}
+p.buttons
+{
+    line-height: 50px;
+
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    text-align: left;
+
+    border: 2px solid #ff9f43;
+}
+.buttons-submit
+{
+    font-weight: bold;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    border: 2px solid #68cc87;
+    background-color: #77eb9c;
+}
+
+
+.buttons-submit:hover
+{
+    background: #68cc87;
+}
+
+#cetak_data:hover
+{
+    background: darkorange !important;
+}
+
+.button-close
+{
+    font-size: 1.2em;
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    padding: 5px;
+
+    cursor: pointer;
+    text-align: right;
+}
+
+.button-close:hover
+{
+    color: dodgerblue;
+}
+
+
+.buttons-check .messages
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    text-align: left;
+}
+
+p
+{
+    text-align: center;
+}
+.data
+{
+    float: left;
+
+    box-sizing: border-box;
+    padding: 5px;
+}
+.data h4,
+.data h3
+{
+    text-transform: capitalize;
+
+    color: #222930;
+}
+.data h4
+{
+    font-size: .9em;
+}
+.data input
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    color: #222930;
+    border: none;
+    background: #ebebeb;
+}
+.data select,
+.data input[type='date']
+{
+    font-weight: bold;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+
+    color: #222930;
+    border: none;
+    background: #ebebeb;
+}
+
+.row::after
+{
+    display: table;
+    clear: both;
+
+    content: '';
+}
+section h2
+{
+    margin: 10px auto;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #222930;
+}
+.bio  form section p
+{
+    margin-bottom: 20px;
+}
+/*End Right Content*/
+
+
+/*
+ LEFT FORM
+*/
+hr.l-form
+{
+    border: 2px solid #ebebeb;
+}
+
+/*Lihat Data siswa css*/
+
+
+.lihat-data-siswa
+{
+    font-weight: 300;
+
+    height: 18px;
+    padding: 15px;
+
+    color: black;
+    background-color: #ebebeb;
+}
+.pencarian
+{
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 20px;
+
+    background-color: #ebebeb;
+}
+.search
+{
+    box-sizing: border-box;
+    width: 100%;
+
+    border: 2px solid #ebebeb;
+    border-color: #ebebeb;
+}
+.search
+{
+    display: flex;
+
+    justify-content: center;
+}
+.input
+{
+    box-sizing: border-box;
+    width: 79%;
+    margin: 20px;
+    padding: 10px;
+
+    background-color: #ebebeb;
+}
+.hasil
+{
+    font-size: 20px;
+
+    margin: 30px;
+}
+.hasil-pencarian
+{
+    box-sizing: border-box;
+    width: 97%;
+    margin: 0 auto;
+}
+.data-siswa
+{
+    display: flex;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100px;
+
+    transition: all .1s ease-in;
+
+    border: 2px solid;
+    border-color: #ebebeb;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.data-oth
+{
+    display: flex;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 190px;
+
+    transition: all .1s ease-in;
+
+    border: 2px solid;
+    border-color: #ebebeb;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.data-siswa img
+{
+    box-sizing: border-box;
+
+    border: 4px solid dodgerblue;
+
+    object-fit: cover;
+}
+.data-siswa h4
+{
+    font-size: 1.3em;
+
+    padding-bottom: 5px;
+
+    text-align: center;
+}
+.data-siswa p
+{
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-top: 8px;
+
+    text-align: left;
+}
+.kls
+{
+    font-family: arial;
+    font-weight: 600;
+}
+.img_profil
+{
+    width: 105px;
+    height: 126px;
+}
+.wrap-text
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.data-detail-siswa
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 60%;
+    min-height: 150px;
+    padding: 10px;
+
+    justify-content: center;
+}
+.button-search
+{
+    width: 150px;
+    height: 43px;
+
+    color: white;
+}
+.section-hasil
+{
+    box-sizing: border-box;
+    width: 95%;
+    margin: 0 auto;
+}
+.section-search
+{
+    width: 95%;
+    margin: 0 auto;
+
+    box-shadow: 0 5px 20px 0 gray;
+}
+.wrap_hasil
+{
+    position: relative;
+
+    min-height: 172px;
+}
+
+.data a.butt-del
+{
+    z-index: 999;
+    top: 0;
+    right: 0;
+
+    padding: 5px;
+
+    transition: all .1s ease-in;
+
+    color: white !important;
+    background-color: #222930;
+}
+.data a.butt-del:hover
+{
+    background-color: deeppink;
+}
+
+.data a.box3,
+.data a.buttons
+{
+    padding: 10px 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    border: 0;
+    background-color: #77eb9c;
+}
+
+.data a
+{
+    text-decoration: none;
+}
+
+.section-butt
+{
+    display: flex;
+
+    justify-content: flex-end;
+}
+.hasil-pencarian a
+{
+    text-decoration: none;
+
+    color: #222930;
+}
+
+.hasil-pencarian a:hover .data-siswa
+{
+    text-decoration: none;
+
+    box-shadow: 0 0 10px 3px gray;
+}
+
+.wrap-bottom
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.paging_buts
+{
+    z-index: 9999;
+
+    display: flex;
+
+    margin-top: -25px;
+
+    justify-content: flex-start;
+}
+
+a.button-i
+{
+    font-size: .9em;
+    font-weight: bold;
+
+    margin-right: 10px;
+    padding: 8px 20px;
+
+    transition: .1s all ease-in;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.button-suc
+{
+    color: #10fa71;
+    border: 2px solid #10fa71;
+}
+a.button-suc:hover
+{
+    color: white;
+    background: #10fa71;
+}
+
+a.butt-penaikan
+{
+    color: #4e10fa;
+    border: 2px solid #4e10fa;
+}
+a.butt-penaikan:hover
+{
+    color: white;
+    background: #4e10fa;
+}
+
+.paging a,
+.paging span
+{
+    padding: 10px;
+
+    text-decoration: none;
+
+    color: white;
+    background: #222930;
+}
+.paging a:hover
+{
+    color: dodgerblue;
+}
+
+/*
+    DETAIL DATA SISWA
+*/
+.detail-foto img
+{
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.detail-data
+{
+    background: #222930;
+}
+.detail-data .data a
+{
+    color: #222930;
+    border: 1px solid #778beb;
+    background: none;
+}
+.detail-data .data h4
+{
+    text-align: left;
+    text-transform: capitalize;
+}
+.detail-data .data h3
+{
+    font-size: .9em;
+
+    color: white;
+}
+.detail-data .data .tag-line-data
+{
+    padding: 10px;
+
+    color: #222930;
+    background: white;
+}
+
+.over-big-text
+{
+    font-size: .9em;
+}
+
+.detail-data .data a:hover
+{
+    color: white;
+    background: #778beb;
+}
+
+.d-line
+{
+    width: 95%;
+    margin: 0 auto;
+
+    border: 2px solid #778beb;
+}
+
+.buttons-e
+{
+    font-weight: bold;
+    line-height: 30px;
+
+    border: none !important;
+    background: #778beb !important;
+}
+.buttons-e:hover
+{
+    background: #5569c9 !important;
+}
+
+div.selector .box12
+{
+    padding: 0;
+}
+.detail-data .data a#bio_siswa
+{
+    color: white;
+    border: none;
+    background: #d7375e !important;
+}
+
+.detail-data .data a#bio_ayah
+{
+    color: white;
+    border: none;
+    background: #37d760 !important;
+}
+
+.detail-data .data a#bio_ibu
+{
+    color: white;
+    border: none;
+    background: #3799d7 !important;
+}
+
+
+
+.detail-data .data a#bio_wali
+{
+    color: white;
+    border: none;
+    background: #d79d37 !important;
+}
+
+.detail-data .data a#bio_sekolah
+{
+    float: right;
+
+    color: white;
+    border: none;
+    background: #7337d7 !important;
+}
+
+
+.detail-data .data a#bio_siswa:hover
+{
+    background: #b01f42 !important;
+}
+
+.detail-data .data a#bio_ayah:hover
+{
+    background: #30c055 !important;
+}
+
+.detail-data .data a#bio_ibu:hover
+{
+    background: #2f7fb3 !important;
+}
+
+.detail-data .data a#bio_wali:hover
+{
+    background: #b6842d !important;
+}
+
+.detail-data .data a#bio_sekolah:hover
+{
+    background: #5d2ab3 !important;
+}
+
+.detail-data section#siswa h3 span,
+.detail-data section#siswa h4
+{
+    color: #d7375e;
+}
+
+.detail-data section#ayah h4
+{
+    color: #37d760;
+}
+
+.detail-data section#ibu h3 span,
+.detail-data section#ibu h4
+{
+    color: #62bdf6;
+}
+
+.detail-data section#wali h4
+{
+    color: #d79d37;
+}
+
+
+.detail-data section#sekolah h4
+{
+    color: #a471fb;
+}
+
+/*EDIT SECTION*/
+
+.nav > span
+{
+    color: deeppink;
+}
+
+/*DETAIL KELAS*/
+
+.wrap-modal
+{
+    position: relative;
+
+    display: flex;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+}
+
+.wrap-modal img
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 220px;
+
+    border: 3px solid #2f7fb3;
+
+    object-fit: cover;
+}
+.wrap-modal h3
+{
+    font-size: .8em;
+
+    position: absolute;
+    bottom: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+
+    transition: opacity .2s ease-in;
+    text-align: center;
+
+    opacity: 1;
+    color: white;
+    background: #2f7fb3;
+}
+
+
+.detail-kelas-siswa
+{
+    padding: 0 !important;
+
+    border: none !important;
+}
+
+.detail-kelas-siswa:hover .wrap-modal h3
+{
+    opacity: 0;
+}
+
+/*
+    SIKEL
+*/
+.box-man
+{
+    border: 2px solid green;
+    background: #4cd57e;
+}
+
+.box-woman
+{
+    border: 2px solid darkred;
+    background: #d8487c;
+}
+
+.box-islamic
+{
+    border: 2px solid green;
+    background: #4dad36;
+}
+
+.box-kristen
+{
+    border: 2px solid #297788;
+    background: #3697ad;
+}
+
+.box-hindu
+{
+    border: 2px solid #2d9071;
+    background: #36ad87;
+}
+
+.box-budha
+{
+    border: 2px solid #808080;
+    background: #a0a0a0;
+}
+
+.box-konghucu
+{
+    border: 2px solid #181f25;
+    background: #222930;
+}
+
+.box-9
+{
+    border: none;
+    background: dodgerblue;
+}
+
+.box-8
+{
+    border: none;
+    background: #894cd5;;
+}
+
+.box-7
+{
+    border: none;
+    background: #4eb1b4;;
+}
+
+.box-7:hover a
+{
+    background-color: #349598;
+}
+
+
+.box-8:hover a
+{
+    background-color: #783ac5;
+}
+.box-kelas a,
+.box-kelas p
+{
+    text-align: left;
+
+    color: #222930;
+    border: 0;
+}
+
+.box-kelas p
+{
+    margin-top: 10px;
+}
+
+
+.box-kelas
+{
+    position: relative;
+    z-index: 0;
+
+    min-height: 155px;
+
+    border: 2px silver;
+    background: #ebebeb;
+}
+
+.box-kelas:hover
+{
+    box-shadow: 0 0 10px 2px gray;
+}
+
+
+.data-detail-kelas h4
+{
+    font-size: 1.4em;
+}
+
+.data-detail-kelas
+{
+    box-sizing: border-box;
+    min-height: 150px;
+    padding: 20px;
+}
+
+.box-siswa a
+{
+    display: flex;
+
+    width: 100%;
+    padding: 0;
+
+    border: 0;
+    background-color: transparent;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.box-sekolah
+{
+    box-sizing: border-box;
+    min-height: 210px;
+
+    border: none;
+    background: #ebebeb;
+}
+.box-sekolah .title
+{
+    font-weight: bold;
+
+    padding: 10px;
+
+    color: white;
+    background: #222930;
+}
+
+.data-kepsek
+{
+    font-weight: bold;
+
+    padding: 5px;
+}
+.data-kepsek p
+{
+    font-weight: .9em;
+}
+.box-sekolah .data-box
+{
+    padding: 5px;
+}
+
+.box-sekolah .data-box table
+{
+    border-collapse: collapse;
+}
+
+.box-sekolah .data-box tr td:first-child
+{
+    font-size: .7em;
+    font-weight: bold;
+
+    padding: 10px;
+
+    text-align: left;
+
+    color: white;
+    border-bottom: 2px solid #222930;
+    background: dodgerblue;
+}
+.box-sekolah .data-box tr td:last-child
+{
+    font-size: .8em;
+    font-weight: normal;
+    font-weight: bold;
+
+    padding-left: 10px;
+
+    color: #222930;
+}
+.box-sekolah .data-box img
+{
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.wrap-kepsek
+{
+    position: relative;
+}
+.box-sekolah .data-kepsek
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: dodgerblue;
+}
+
+.box-sekolah .data-kepsek p
+{
+    font-size: 1em;
+
+    text-align: center;
+
+    color: white;
+}
+.sub-header-inform
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .8em;
+    font-weight: bolder;
+
+    padding: 10px 0;
+
+    text-align: center;
+
+    background: rgba(0, 0, 0, .79);
+}
+
+.loading
+{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+
+    transition: .5s all linear;
+
+    background: #222930d9;
+
+    justify-content: center;
+    align-items: center;
+}

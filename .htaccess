@@ -1,0 +1,86 @@
+RewriteEngine On
+
+
+#================================================
+#============================/ SISWA \===========
+#================================================
+RewriteRule ^siswa/tambah/$  					 mod_siswa/tambah_data.php [L]
+RewriteRule ^siswa/detail/([0-9a-zA-Z\.]+)/([a-zA-Z\-]+) mod_siswa/detail_data.php?nis_siswa=$1&nama=$2 [L]
+RewriteRule ^siswa/cetak/([0-9]+)      			 mod_siswa/cetak_data.php?nis_siswa=$1 [L]
+RewriteRule ^siswa/edit/([0-9a-zA-Z\.]+)/([a-zA-Z\-]+)   mod_siswa/edit_data.php?nis_siswa=$1&nama=$2 [L]
+RewriteRule ^siswa/hapus/([0-9A-Za-z\.]+) 				 mod_siswa/hapus_data.php?nis_siswa=$1 [L]
+RewriteRule ^siswa/([0-9]+)$ 				     mod_siswa/index.php?hal=$1 [L]
+
+#PINDAH
+RewriteRule ^siswa/([pindah|alumni|tidak\-\aktif]+)/([0-9]+)$ mod_siswa/index.php?status=$1&hal=$2 [L]
+RewriteRule ^siswa/([pindah|alumni|tidak\-\aktif]+)/          mod_siswa/index.php?status=$1 [L]
+
+RewriteRule ^siswa/$  							 mod_siswa/index.php [L]
+
+
+#================================================
+#============================/ GURU \============
+#================================================
+RewriteRule ^guru/tambah/$  					 mod_guru/tambah_data.php [L]
+RewriteRule ^guru/detail/([0-9]+)/([a-zA-Z\-]+)  mod_guru/detail_data.php?nim_guru=$1&nama=$2 [L]
+RewriteRule ^guru/edit/([0-9]+)/([a-zA-Z\-]+) 	 mod_guru/edit_data.php?nim_guru=$1&nama=$2 [L]
+RewriteRule ^guru/hapus/([0-9]+) 				 mod_guru/hapus_data.php?nim_guru=$1 [L]
+RewriteRule ^guru/([0-9]+)$ 				     mod_guru/index.php?hal=$1 [L]
+RewriteRule ^guru/$  							 mod_guru/index.php [L]
+
+
+#================================================
+#============================/ KELAS \===========
+#================================================
+RewriteRule ^kelas/tambah/$  					 	 mod_kelas/tambah_data.php [L]
+RewriteRule ^kelas/detail/([0-9]+)/([0-9a-zA-Z\-]+)  mod_kelas/detail_data.php?id_kelas=$1&nama=$2 [L]
+RewriteRule ^kelas/cetak/([0-9]+)      			     mod_cetak/detail_kelas.php?id_kelas=$1 [L]
+RewriteRule ^kelas/edit/([0-9]+)/([0-9a-zA-Z\-]+)    mod_kelas/edit_data.php?id_kelas=$1&nama=$2 [L]
+RewriteRule ^kelas/hapus/([0-9]+) 				 	 mod_kelas/hapus_data.php?id_kelas=$1 [L]
+RewriteRule ^kelas/([0-9]+)$ 				         mod_kelas/index.php?hal=$1 [L]
+RewriteRule ^kelas/$  							     mod_kelas/index.php [L]
+
+#================================================
+#============================/ MAPEL \===========
+#================================================
+RewriteRule ^mapel/tambah/$  					 	 mod_mapel/tambah_data.php [L]
+RewriteRule ^mapel/edit/([0-9]+)/([0-9a-zA-Z\-]+)    mod_mapel/edit_data.php?id_mapel=$1&nama=$2 [L]
+RewriteRule ^mapel/hapus/([0-9]+) 					 mod_mapel/hapus_data.php?id_mapel=$1 [L]
+RewriteRule ^mapel/([0-9]+)$ 				    	 mod_mapel/index.php?hal=$1 [L]
+RewriteRule ^mapel/$  							     mod_mapel/index.php [L]
+
+
+#================================================
+#============================/ CETAK \===========
+#================================================
+RewriteRule ^cetak/kelas/([7|8|9]+) 				 mod_cetak/cetak_kelas.php?kelas=$1 [L]
+RewriteRule ^cetak/$  							     mod_cetak/index.php [L]
+RewriteRule ^cetak/pindah/                           mod_cetak/cetak_ket.php [L]
+RewriteRule ^cetak/aktif/                            mod_cetak/cetak_ket_aktif.php [L]
+
+#================================================
+#============================/ TMP URL \=========
+#================================================
+RewriteRule ^cetak/luar  	mod_cetak/cetak_Lzona.php [L]
+
+#================================================
+#============================/ USER \============
+#================================================
+RewriteRule ^user/tambah/$  					 	 	mod_user/tambah_data.php [L]
+RewriteRule ^user/detail/([0-9]+)/([0-9a-zA-Z]+) 	 	mod_user/detail_data.php?id_user=$1&nama=$2 [L]
+RewriteRule ^user/edit/([0-9]+)/([0-9a-zA-Z]+)       	mod_user/edit_data.php?id_user=$1&nama=$2 [L]
+RewriteRule ^user/edit/password/([0-9]+)/([0-9a-zA-Z]+) mod_user/edit_pw_data.php?id_user=$1&nama=$2 [L]
+RewriteRule ^user/hapus/([0-9]+) 					 	mod_user/hapus_data.php?id_user=$1 [L]
+RewriteRule ^user/([0-9]+)$ 				    	    mod_user/index.php?hal=$1 [L]
+RewriteRule ^user/$  							     	mod_user/index.php [L]
+
+#================================================
+#============================/ SEKOLAH \=========
+#================================================
+RewriteRule ^sekolah/$  							     	mod_sekolah/index.php [L]
+#================================================
+#============================/ SIKEL \===========
+
+RewriteRule ^daftar-kelas/detail/([0-9]+)/([0-9a-zA-Z\-]+)       mod_sikel/detail-data.php?id_kelas=$1&nama=$2 [L]
+RewriteRule ^daftar-kelas/absen/([0-9]+)                         mod_cetak/absen_kelas.php?id_kelas=$1 [L]
+RewriteRule ^daftar-kelas/([7|8|9]+)                             mod_sikel/data.php?kelas=$1 [L]
