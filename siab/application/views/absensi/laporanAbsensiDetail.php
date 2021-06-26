@@ -17,7 +17,7 @@
 				<?php if(!count($siswa) < 1): ?>
 					<?php $i=1; foreach ($siswa as $row): ?>
 						<div class="row">
-							<div class="col-7 p-0 d-flex pt-4 pb-4">
+							<div class="col-6 p-0 d-flex pt-4 pb-4">
 								<div class="col-1 align-self-center ">
 									<h6 class="text-center d-xl-flex justify-content-center align-content-center"><?= $i ?></h6>
 								</div>
@@ -37,8 +37,56 @@
 									</h5>				
 								</div>
 							</div>
-							<div class="col-5 presentase-kehadiran d-flex justify-content-center align-items-center">
-								<table>
+							<div class="col-6 presentase-kehadiran justify-content-center align-items-center">
+							
+							<div class="row habis">
+								<div class="col">
+									<div class="card bg-primary text-white">
+										<div class="card-header bg-primary">Hadir</div>
+										<div class="card-body">
+											<?php echo $row['hadir']; ?>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="card bg-secondary text-white">
+										<div class="card-header bg-secondary">Alpa</div>
+										<div class="card-body">
+											<?php echo $row['alpa']; ?>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="card bg-danger text-white">
+										<div class="card-header bg-danger">Bolos</div>
+										<div class="card-body">
+											<?php echo $row['bolos']; ?>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="card bg-warning text-white">
+										<div class="card-header bg-warning">Izin</div>
+										<div class="card-body">
+											<?php echo $row['izin']; ?>
+										</div>
+									</div>
+								</div>
+								<div class="col">
+									<div class="card bg-success text-white">
+										<div class="card-header bg-success">Sakit</div>
+										<div class="card-body">
+											<?php echo $row['sakit']; ?>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h6>Presentasi Kehadiran</h6>
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+							</div>
+
+								<!-- <table>
 									<tr>
 										<th class="bg-success border border-success text-white">Hadir</th>
 										<td></td>
@@ -66,7 +114,7 @@
 										<td class="bg-dark text-white border border-dark" colspan="3">Presentase</td>
 										<td class="bg-secondary text-white border border-secondary" colspan="6">75%</td>
 									</tr>
-								</table>
+								</table> -->
 							</div>
 						</div>
 						

@@ -26,8 +26,9 @@
         <!-- hanya wali kelas    -->
         <li class="nav-item"><a class="nav-link" href="<?php echo base_url("laporanAbsensi"); ?>"><i class="fas fa-file-export"></i> Laporan Absensi</a></li>
       <?php endif; ?>
+      
       <!-- hanya wali kelas    -->
-      <?php if($user['wali_kelas'] > 0): ?>
+      <?php if($user['wali_kelas'] ?? 0 > 0): ?>
         <li class="nav-item"><a class="nav-link" href="<?php echo base_url("absensi/anakdidik"); ?>"><i class="fas fa-users"></i> Lihat Anak Didik</a></li>
       <?php endif; ?>
       

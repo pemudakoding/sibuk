@@ -320,3 +320,32 @@ body {
   text-align: center;
   
 }
+
+.habis .card{
+  text-align: center;
+}
+.habis .card-body{
+  padding: 0.2em;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.habis .card-header{
+  padding: 0.1em 0em;
+}
+.habis .col{
+  padding: 0.1em;
+}
+
+.habis{
+  margin-top:0.6em;
+}
+.presentase-kehadiran .progress{
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 1em;
+}
+
+.presentase-kehadiran h6{
+  margin-top: -22px;
+  margin-left: -15px;
+}

@@ -1,9 +1,9 @@
 <?php 
 	
 	//URL PRIVATE
-	$root = $_SERVER['DOCUMENT_ROOT']."/sekolah/"; 
+	$root = $_SERVER['DOCUMENT_ROOT']."/project/sibuk/"; 
 
 	//URL PUBLIC
-	$url  = 'http://localhost/sekolah';
+	$url  = 'http://localhost/project/sibuk';
 
  ?>

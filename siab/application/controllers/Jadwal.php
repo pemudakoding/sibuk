@@ -19,6 +19,7 @@ class Jadwal extends CI_Controller {
 
 	}
 
+	
 	public function kelas($id_kelas=NULL){
 		$this->load->model("jadwalModels");
 		$dataKelas["resultHari"]=$this->jadwalModels->getHari();
@@ -199,10 +200,10 @@ class Jadwal extends CI_Controller {
   }
 
 	public function getUbahJadwal(){
-		$id=$this->input->post("id_jam_jadwal");
+		$id=$this->input->post("id_jadwal");
 		if(isset($id)){
-			$query=$this->db->query("SELECT mapel.id_mapel as idmapel, guru.id_guru as idguru FROM jadwal INNER JOIN guru ON jadwal.id_guru = guru.id_guru INNER JOIN mapel ON guru.id_mapel = mapel.id_mapel WHERE id_jam_jadwal=$id")->result_array();
-
+			$query=$this->db->query("SELECT mapel.id_mapel as idmapel, guru.id_guru as idguru FROM jadwal INNER JOIN guru ON jadwal.id_guru = guru.id_guru INNER JOIN mapel ON guru.id_mapel = mapel.id_mapel WHERE id_jadwal=$id")->result_array();
+			
 			echo "<div class='form-group'>";
 			echo "	<label for='pilihMataPelajaranUbah' class='col-form-label'>Pilih Mata Pelajaran</label>";
 			echo "	<select class='form-control' id='pilihMataPelajaranUbah'>";
@@ -223,9 +224,10 @@ class Jadwal extends CI_Controller {
 			echo "	<select class='form-control' id='pilihGuruUbah'>";
 			echo "		<option value=''>-Pilih-</option>";
 						$idmapel=$query[0]["idmapel"];
-						$queryGuru=$this->db->query("SELECT * FROM guru WHERE id_mapel = $idmapel ORDER BY nama_guru ASC");
+						$queryGuru=$this->db->query("SELECT * FROM guru WHERE id_mapel = '$idmapel' ORDER BY nama_guru ASC");
+
 						foreach($queryGuru->result() as $rowGuru){
-							if($rowGuru->id_mapel==$query[0]["idguru"]){
+							if($rowGuru->id_guru==$query[0]["idguru"]){
 								echo "<option value='".$rowGuru->id_guru."' selected>".$rowGuru->nama_guru."</option>";
 							}else if($rowGuru->id_guru!=$query[0]["idguru"]){
 								echo "<option value='".$rowGuru->id_guru."'>".$rowGuru->nama_guru."</option>";

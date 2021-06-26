@@ -37,7 +37,13 @@
 
 			$this->layout->template($data);
 
-			
+		}
+
+		public function getLaporan(){
+			$idGuru 		= $this->User->getUser($this->Session->getSession('username'))[0]['id_guru'];
+			$laporan 		= $this->Absensimodels->getKelasMengajar($idGuru);
+
+			echo json_encode($laporan);
 		}
 	}
 	

@@ -34,7 +34,8 @@ class Absensi extends CI_Controller {
     $this->load->model('User');
     $this->load->model('FlashData');
 
-    $hari = "rabu";
+    //debugging jadwal disini 
+    //$hari = "rabu";
 
     if($this->Absensimodels->getHari($hari)==NULL){
       $hari = "libur";
@@ -62,42 +63,45 @@ class Absensi extends CI_Controller {
 
     $dataAbsensi['resultAbsen'] = array();
     //Load semua List Absen
-    foreach ($getlistAbsen as $row) {
+    if($getlistAbsen != 'libur'){
+      foreach ($getlistAbsen as $row) {
       
-      //Cek dulu kosong apa gak array $dataAbsensi['resultAbsen'] yang key nya id_kelas
-      //Awalnya masuk di else karena array $dataAbsensi['resultAbsen'] awalnya kosong gak ada apa apa
-      //jika arraynya tidak lagi kosong berarti true.. dan masuk dikondisi dibawa ini
-      if (!empty($dataAbsensi['resultAbsen'][$row['id_kelas']])) {
-
-          //Variable $defaultValue adalah variable untuk ngambil valuenya sekarang
-          $defaultValue = (array) $dataAbsensi['resultAbsen'][$row['id_kelas']]['jam'];
-
-          // Variable dibawah ini fungsinya membuat kembali value diindex jam dengan cara dimerge
-          // maka 2 atau lebih array yang index nya sama maka akan dimerge dibagian jam saja.. yang lain akan disatukan
-          // dan tidak ada yang diubah
-          $dataAbsensi['resultAbsen'][$row['id_kelas']]['jam'] = array_merge($defaultValue, (array) $row['jam']);
-
-          //kondisi ini cuma ngecek jamnya lebih dari satu apa gak..
-          //kalo lebih dari 1 ambil awal jam dengan akhir jam saja 
-          if(count($dataAbsensi['resultAbsen'][$row['id_kelas']]['jam']) > 1){
-            //Awal jam 
-            $awalJam  = explode('-',reset($dataAbsensi['resultAbsen'][$row['id_kelas']]['jam']))[0];
-
-            //Akhir jam
-            $akhirJam = explode('-',end($dataAbsensi['resultAbsen'][$row['id_kelas']]['jam']));
-            $akhirJam = end($akhirJam);
-
-            //buat kembali array dengan index jam menjadi 1jam saja yaitu jam awal dan akhir
-            $dataAbsensi['resultAbsen'][$row['id_kelas']]['jam'] = "$awalJam-$akhirJam";
-          }
-
-      //Jika arraynya kosong,
-      //kita buat array dengan index sesuai id_kelas dengan valuenya  array list absen itu tersebut
-      } else {
-          $dataAbsensi['resultAbsen'][$row['id_kelas']] = $row;
+        //Cek dulu kosong apa gak array $dataAbsensi['resultAbsen'] yang key nya id_kelas
+        //Awalnya masuk di else karena array $dataAbsensi['resultAbsen'] awalnya kosong gak ada apa apa
+        //jika arraynya tidak lagi kosong berarti true.. dan masuk dikondisi dibawa ini
+        if (!empty($dataAbsensi['resultAbsen'][$row['id_kelas']])) {
+  
+            //Variable $defaultValue adalah variable untuk ngambil valuenya sekarang
+            $defaultValue = (array) $dataAbsensi['resultAbsen'][$row['id_kelas']]['jam'];
+  
+            // Variable dibawah ini fungsinya membuat kembali value diindex jam dengan cara dimerge
+            // maka 2 atau lebih array yang index nya sama maka akan dimerge dibagian jam saja.. yang lain akan disatukan
+            // dan tidak ada yang diubah
+            $dataAbsensi['resultAbsen'][$row['id_kelas']]['jam'] = array_merge($defaultValue, (array) $row['jam']);
+  
+            //kondisi ini cuma ngecek jamnya lebih dari satu apa gak..
+            //kalo lebih dari 1 ambil awal jam dengan akhir jam saja 
+            if(count($dataAbsensi['resultAbsen'][$row['id_kelas']]['jam']) > 1){
+              //Awal jam 
+              $awalJam  = explode('-',reset($dataAbsensi['resultAbsen'][$row['id_kelas']]['jam']))[0];
+  
+              //Akhir jam
+              $akhirJam = explode('-',end($dataAbsensi['resultAbsen'][$row['id_kelas']]['jam']));
+              $akhirJam = end($akhirJam);
+  
+              //buat kembali array dengan index jam menjadi 1jam saja yaitu jam awal dan akhir
+              $dataAbsensi['resultAbsen'][$row['id_kelas']]['jam'] = "$awalJam-$akhirJam";
+            }
+  
+        //Jika arraynya kosong,
+        //kita buat array dengan index sesuai id_kelas dengan valuenya  array list absen itu tersebut
+        } else {
+            $dataAbsensi['resultAbsen'][$row['id_kelas']] = $row;
+        }
+        
       }
-      
     }
+   
     $dataAbsensi['resultAbsen'] = array_values($dataAbsensi['resultAbsen']);
      /**
        * Get FLASH MESSAGES

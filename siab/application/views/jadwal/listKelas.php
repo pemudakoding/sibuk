@@ -31,9 +31,8 @@
             <?php
               $queryJadwal=$this->jadwalModels->getJadwal($rowHari["id_hari"],$idKelas,$rowJamJadwal["id_jam_jadwal"]);
               foreach($queryJadwal as $rowJadwal){
-
             ?>
-            <a data-toggle="modal" data-target="#modalUbahJadwal" href="#" class="btn float-right btnSetting btn-sm" data-tooltip="tooltip" data-placement="left" title="Ubah" data-jamke="<?php echo $rowJamJadwal["jam_ke"]; ?>" data-idjadwal="<?php echo $rowJamJadwal["id_jam_jadwal"]; ?>" data-hari="<?php echo $rowHari["hari"]; ?>"><i class="fas fa-cog"></i></a>
+            <a data-toggle="modal" data-target="#modalUbahJadwal" href="#" class="btn float-right btnSetting btn-sm" data-tooltip="tooltip" data-placement="left" title="Ubah" data-jamke="<?php echo $rowJamJadwal["jam_ke"]; ?>" data-idjadwal="<?php echo $rowJadwal['id_jadwal']; ?>" data-hari="<?php echo $rowHari["hari"]; ?>"><i class="fas fa-cog"></i></a>
             <hr/>
             <b><?php echo $rowJadwal["nama_guru"]."<br/>".$rowJadwal["nama_mapel"]; ?></b>
             <hr/>
@@ -181,7 +180,7 @@ $('#modalUbahJadwal').on('show.bs.modal', function (event) {
   $.ajax({
     method:"POST",
     url:"<?php echo base_url("jadwal/getUbahJadwal"); ?>",
-    data:{"id_jam_jadwal":id_jadwal},
+    data:{"id_jadwal":id_jadwal},
     success:function(msg){
       $("#msgUbahJadwal").html(msg);
     }
@@ -196,8 +195,7 @@ $('#modalUbahJadwal').on('show.bs.modal', function (event) {
          method:"POST",
             url:"<?php echo base_url("jadwal/prosesUbahJadwal") ?>",
            data:{"id_jadwal":id_jadwal,"id_guru":idguru},
-        success:function(msg){
-
+        success:function(msg){          
           if(msg=="wajib"){
             $("#submitUbahJadwal").removeAttr("disabled");
             $("#msUpJadwal").html("<div id='alertUpJadwal' class='alert alert-danger alert-dismissible fade show' role='alert'>Pilih Guru Terlebih Dahulu<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
